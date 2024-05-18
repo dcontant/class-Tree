@@ -121,13 +121,10 @@ inorder_values = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 postorder_values = ['A', 'C', 'E', 'D', 'B', 'H', 'I', 'G', 'F']
 
 
-# Reconstruct the tree
+# build the tree from preorder_values and inorder_values
 root = buildTree(preorder_values, inorder_values)
 
-'''# Print the inorder_values traversal of the reconstructed tree to verify
-print("inorder_values Traversal of Reconstructed Tree:")
-printinorder_values(root)
-'''
+
 #TESTS
 
 
