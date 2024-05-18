@@ -101,6 +101,13 @@ def isSymmetric(root):
     if not root:
         return True
     return isMirror(root.left, root.right)
+
+def maxDepth(root):
+    if not root:
+        return 0
+    left_depth = maxDepth(root.left)
+    right_depth = maxDepth(root.right)
+    return max(left_depth, right_depth) + 1
     
 # re: https://stackoverflow.com/questions/10171844/breadth-first-traversal-for-a-tree-python?rq=3
 from collections import deque
