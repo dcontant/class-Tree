@@ -108,7 +108,22 @@ def maxDepth(root):
     left_depth = maxDepth(root.left)
     right_depth = maxDepth(root.right)
     return max(left_depth, right_depth) + 1
+
+def sortedArrayToBST(nums):
+    '''Given an integer array nums where the elements are sorted in ascending order, convert it to a 
+       height-balanced binary search tree'''
+    if not nums:
+        return None
+
+    mid = len(nums) // 2
+    root = TreeNode(nums[mid])
     
+    root.left = sortedArrayToBST(nums[:mid])
+    root.right = sortedArrayToBST(nums[mid + 1:])
+    
+    return root
+
+
 # re: https://stackoverflow.com/questions/10171844/breadth-first-traversal-for-a-tree-python?rq=3
 from collections import deque
 
