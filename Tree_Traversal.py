@@ -90,7 +90,18 @@ def inorder(node: TreeNode) -> [TreeNode]:
             node = node.right
     return visit
 
+def isSymmetric(root):
+    def isMirror(left, right):
+        if not left and not right:
+            return True
+        if not left or not right:
+            return False
+        return (left.value == right.value) and isMirror(left.left, right.right) and isMirror(left.right, right.left)
 
+    if not root:
+        return True
+    return isMirror(root.left, root.right)
+    
 # re: https://stackoverflow.com/questions/10171844/breadth-first-traversal-for-a-tree-python?rq=3
 from collections import deque
 
