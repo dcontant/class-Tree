@@ -90,11 +90,21 @@ def inorder(node: TreeNode) -> [TreeNode]:
             node = node.right
     return visit
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+
+# re: https://stackoverflow.com/questions/10171844/breadth-first-traversal-for-a-tree-python?rq=3
+from collections import deque
+
+def bfs(node: TreeNode) -> dict[TreeNode:TreeNode]:
+    P, Q = {node: None}, deque([node]) 
+    while Q:
+        u = Q.popleft() 
+        for v in [u.left, u.right]:
+            if v:
+                if v in P: continue 
+                P[v] = u 
+                Q.append(v)
+    return P
+
 
 def buildTree(preorder_values, inorder_values):
     if not preorder_values or not inorder_values:
