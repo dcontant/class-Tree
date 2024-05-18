@@ -1,4 +1,4 @@
-```python
+
 # TREE TRAVERSAL
 # from https://en.wikipedia.org/wiki/Tree_traversal
 
@@ -145,4 +145,3 @@ print('preorder traversal iterative have pass')
 assert [node.val for node in preorder_recursive(root)  if node] == ['F', 'B', 'A', 'D', 'C', 'E', 'G', 'I', 'H'], 'preorder traversal recursive'
 print('preorder traversal recursive have pass')
 print('All tests have pass')
-```
