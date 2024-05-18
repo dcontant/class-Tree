@@ -2,6 +2,9 @@
 # TREE TRAVERSAL
 # from https://en.wikipedia.org/wiki/Tree_traversal
 
+[(https://commons.wikimedia.org/wiki/File:Sorted_binary_tree_ALL_RGB.svg#/media/File:Sorted_binary_tree_ALL_RGB.svg)]
+
+```
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -142,3 +145,4 @@ print('preorder traversal iterative have pass')
 assert [node.val for node in preorder_recursive(root)  if node] == ['F', 'B', 'A', 'D', 'C', 'E', 'G', 'I', 'H'], 'preorder traversal recursive'
 print('preorder traversal recursive have pass')
 print('All tests have pass')
+```
