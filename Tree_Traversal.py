@@ -1,6 +1,6 @@
 
 # TREE TRAVERSAL
-# from https://en.wikipedia.org/wiki/Tree_traversal
+# ref:  https://en.wikipedia.org/wiki/Tree_traversal
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
